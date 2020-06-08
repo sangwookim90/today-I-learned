@@ -1,0 +1,8 @@
+#study:
+#  name: Sangwoo
+#  age : ${random.int(0,100)}
+#  fullName: ${study.name} Kim
+#  sessionTimeout: 25s
+spring:
+  profiles:
+    active: prod

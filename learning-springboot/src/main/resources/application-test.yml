@@ -1,0 +1,4 @@
+study:
+  name: test-sangwoo
+  age : ${random.int(0,100)}
+  fullName: ${study.name} Kim

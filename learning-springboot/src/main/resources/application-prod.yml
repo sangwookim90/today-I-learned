@@ -1,0 +1,6 @@
+study.name: prod-Sangwoo
+
+
+spring:
+  profiles:
+    include: proddb
