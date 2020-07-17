@@ -18,6 +18,8 @@ public class AccountController {
 
     private final SignUpFormValidator signUpFormValidator;
 
+    private final AccountRepository accountRepository;
+
     @InitBinder("signUpForm")
     public void initBinder(WebDataBinder webDataBinder) {
         webDataBinder.addValidators(signUpFormValidator);
@@ -39,7 +41,10 @@ public class AccountController {
                 .email(signUpForm.getEmail())
                 .nickname(signUpForm.getNickname())
                 .password(signUpForm.getPassword()) // TODO encoding 해야함
+                //.emailVerified(false)  :  default
+                .studyUpdatedByWeb(true)
                 .build();
+        Account newAccount = accountRepository.save(account);
 
         // TODO 회원가입 처리
         return "redirect:/";
