@@ -54,5 +54,6 @@ public class Account {
     private boolean studyUpdatedByWeb;
 
 
-
+    public void generateEmailCheckToken() {
+    }
 }
